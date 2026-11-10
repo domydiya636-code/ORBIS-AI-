@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ORBIS — Beyond the Limits</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #07131d;
+  color: white;
+  text-align: center;
+}
+header {
+  padding: 35px 15px;
+}
+h1 {
+  color: #55caff;
+  font-size: 42px;
+  letter-spacing: 5px;
+}
+p { color: #b9cbd8; }
+main {
+  max-width: 650px;
+  margin: auto;
+  padding: 20px;
+}
+.panel {
+  background: #102638;
+  padding: 25px;
+  border-radius: 18px;
+  margin: 20px 0;
+}
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 14px;
+  border-radius: 9px;
+  border: none;
+  margin: 12px 0;
+}
+button {
+  background: #168ed0;
+  color: white;
+  border: none;
+  padding: 13px 25px;
+  border-radius: 9px;
+  font-size: 16px;
+}
+#answer { color: #8edaff; }
+</style>
+</head>
+<body>
+<header>
+  <h1>ORBIS</h1>
+  <p>BEYOND THE LIMITS OF IMAGINATION</p>
+  <p>🌍 Explore. Discover. Understand.</p>
+</header>
+
+<main>
+  <div class="panel">
+    <h2>Welcome to ORBIS</h2>
+    <p>A new journey into global technology and artificial intelligence.</p>
+  </div>
+
+  <div class="panel">
+    <h2>ORBIS AI</h2>
+    <p>Ask a question and explore new ideas.</p>
+    <input id="question" placeholder="Ask ORBIS something...">
+    <button onclick="askOrbis()">Ask ORBIS</button>
+    <p id="answer"></p>
+  </div>
+
+  <div class="panel">
+    <h2>Our Vision</h2>
+    <p>Connecting natural resources, global infrastructure,
+    intelligent systems and a sustainable future.</p>
+  </div>
+</main>
+
+<script>
+function askOrbis() {
+  let q = document.getElementById("question").value;
+  let answer = document.getElementById("answer");
+
+  if (!q.trim()) {
+    answer.textContent = "Please enter a question first.";
+  } else {
+    answer.textContent =
+      "Your question: " + q +
+      " — ORBIS AI is currently a prototype. Real AI connection is coming next!";
+  }
+}
+</script>
+</body>
+</html>
